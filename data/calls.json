@@ -124,6 +124,112 @@
       "salt": "42d0e1bf2939ab602015162b682aefae",
       "sealed_at": "2026-08-18T04:10:24Z",
       "state": "revealed"
+    },
+    {
+      "call_id": "19053c0be69ff59a",
+      "commitment": "902b3a77e3b7344576d2bac3c8702635b1439e39719be8cb53a27604f6d9685f",
+      "methodology_version": 1,
+      "record": {
+        "company": "Zeta Global Holdings Corp.",
+        "conviction": "MEDIUM",
+        "generated_at": "2026-08-14T19:26:34Z",
+        "pdf_sha256": "54184422c76dceac33caa9abdd5f91acee0947082338be167c4911899824e1a0",
+        "pdf_size_bytes": 233741,
+        "price_in_thesis": 29.14,
+        "provenance": "backfilled",
+        "rating": "BUY",
+        "research_as_of": "2026-08-14T19:19:17.989419+00:00",
+        "schema_version": "2",
+        "stop_price": null,
+        "target_price": 35.0,
+        "thesis_statement": "Zeta is compounding at ~39% revenue growth with expanding margins, positive Q2 GAAP net income, and now-generating free cash flow, powered by an AI-native marketing/CRM platform that keeps landing large multi-vertical customers (197 super-scaled, +17% ARPU to $1.8M). The 20th consecutive beat-and-raise and a newly introduced AI adoption-and-monetization framework give an independently derived ~20% upside that is only partially priced in at ~18x forward EBITDA; the decisive risks are that headline ~39% includes ~$199M of M&A (Marigold) and ~$15M of election-branded political revenue, so sustaining ~25% organic growth into FY27 is the key validation.",
+        "ticker": "ZETA",
+        "voided": null
+      },
+      "salt": "825a09f9dfe9e4c9a600b28f88d10ea0",
+      "sealed_at": "2026-08-18T04:24:46Z",
+      "state": "revealed"
+    },
+    {
+      "call_id": "22261f41ab595819",
+      "commitment": "e03ad3e09ce4ee0f7afd98490abfc442352bb3c08b589b75adb755fbbaef3007",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-18T04:24:46Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "25f88c017048b133",
+      "commitment": "6d349d2969e90f9507bb948b3f17615488f35d0b5f8eb2072b41c829d031f75f",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-18T04:24:46Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "2b7aa34ffcaff6f6",
+      "commitment": "63225b82e0cca702f9f37128ccbbca7fcf3f2494579880672361ca6bc15a28a5",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-18T04:24:46Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "2e37aaba0224d740",
+      "commitment": "33020db3254184f752084cc8a9fad23cc1e6f9e9f0878e51f21df245333808a1",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-18T04:24:46Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "5e177f126a0cadf4",
+      "commitment": "a609b8e3803a3c95ad47a700be432b71cd28977f79297c71a3f1fa9c34c3251c",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-18T04:24:46Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "80c16fc01835add7",
+      "commitment": "97f582bb7671351e8935622cd472068f4af362b5f91f3a4e9ea63f2d3f608d25",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-18T04:24:46Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "8be01fe830cf532c",
+      "commitment": "b9f160a53af899393ff91d21de476d80967c3f4208bbcc8dbb2e6e1aa0f11e77",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-18T04:24:46Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "9acd90d424d1a3ea",
+      "commitment": "ff434eec03462ba846b8f7a1c4e204b4199c5e7963f8cc20e44b8efa5689439b",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-18T04:24:46Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "e4526c1eb624fdb3",
+      "commitment": "eb6025490c1c670179d7aa5b798327bce2afe161de47962cfd491f9b39569fc6",
+      "methodology_version": 1,
+      "record": {
+        "company": "Space Exploration Technologies Corp.",
+        "conviction": "MEDIUM",
+        "generated_at": "2026-08-15T08:10:13Z",
+        "pdf_sha256": "7ab9d9fef731b403940bdab5b07340a14e97cc7df6d90a6eedb7e60820b6572a",
+        "pdf_size_bytes": 263559,
+        "price_in_thesis": 140.0,
+        "provenance": "backfilled",
+        "rating": "STRONG_SELL",
+        "research_as_of": "2026-08-15T08:00:18.713251+00:00",
+        "schema_version": "2",
+        "stop_price": null,
+        "target_price": 105.0,
+        "thesis_statement": "SPCX owns a genuinely attractive Connectivity engine: Starlink drove $11.4B of 2025 revenue, $4.4B of segment operating income, and a sharp subscriber ramp. But at $140 the market value is approximately $1.84T, or about 80x trailing sales, so the stock already capitalizes successful execution in Connectivity plus substantial AI and Starship outcomes that remain unproven and capital intensive. The risk-adjusted SOTP is below the quote; the next public earnings and Starship/AI spending evidence should determine whether that gap closes.",
+        "ticker": "SPCX",
+        "voided": null
+      },
+      "salt": "ed4d99b4f72e97772ff20c76fd923533",
+      "sealed_at": "2026-08-18T04:24:46Z",
+      "state": "revealed"
     }
   ],
   "embargo_days": 2,
