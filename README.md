@@ -22,6 +22,12 @@ The commitment convention is SHA-256 over UTF-8 `canonical_json(record) + salt`.
 - Entry: the first trading session whose close occurs at or after `generated_at`; SPY uses the same session.
 - Horizons: 182 and 365 calendar days after entry. Each uses the last close on or before the horizon date.
 - Excess return: `(P_h / P_0 - 1) - (B_h / B_0 - 1)`.
+  - `P_0`: security adjusted close on the first session whose 4:00 p.m. New York close is at or after generation.
+  - `P_h`: security adjusted close on the last available session at or before horizon `h`.
+  - `B_0`: SPY adjusted close on the same entry session as `P_0`.
+  - `B_h`: SPY adjusted close on the last available session at or before horizon `h`.
+  - `h`: 182 calendar days after entry for 6 months or 365 days for 12 months.
+  - The first parenthesis is the security return; the second is SPY’s return. Their difference is benchmark-relative excess return and is computed independently for each horizon.
 - Buy and strong-buy calls are correct when excess return is positive. Sell and strong-sell calls are correct when it is negative. Hold is correct when absolute excess return is at most five percentage points.
 - Source `AVOID` calls normalize to `STRONG_SELL`. Conviction is displayed as issued (`HIGH`, `MEDIUM-HIGH`, `MEDIUM`, or `LOW`) and does not affect scoring.
 - Pending horizons are not scored. Delistings or acquisitions use the last available close and are flagged.

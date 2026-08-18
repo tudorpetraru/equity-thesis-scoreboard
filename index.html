@@ -128,6 +128,17 @@
         <article><span>06</span><h3>Edge cases</h3><p>Unmatured horizons remain pending. A delisting or acquisition uses the last available close and is flagged. Missing data is visible and does not break the record.</p></article>
       </div>
       <div class="formula" aria-label="Excess return formula"><span>EXCESS RETURN</span><strong>(Pₕ / P₀ − 1) − (Bₕ / B₀ − 1)</strong></div>
+      <div class="formula-detail" aria-labelledby="formula-detail-title">
+        <h3 id="formula-detail-title">What each term means</h3>
+        <dl class="formula-terms">
+          <div><dt>P₀</dt><dd>The security’s adjusted closing price on the entry session: the first trading session whose 4:00 p.m. New York close is at or after the thesis generation time.</dd></div>
+          <div><dt>Pₕ</dt><dd>The security’s adjusted close on the last available trading session at or before the selected horizon date.</dd></div>
+          <div><dt>B₀</dt><dd>SPY’s adjusted closing price on the same entry session used for P₀.</dd></div>
+          <div><dt>Bₕ</dt><dd>SPY’s adjusted close on the last available trading session at or before the same horizon date.</dd></div>
+          <div><dt>h</dt><dd>The horizon being evaluated: 182 calendar days after entry for 6 months, or 365 calendar days after entry for 12 months.</dd></div>
+        </dl>
+        <p class="formula-calculation"><strong>How it is computed.</strong> Pₕ / P₀ − 1 is the security’s return. Bₕ / B₀ − 1 is SPY’s return over the corresponding period. Subtracting the SPY return from the security return produces excess return: positive means the security outperformed SPY; negative means it underperformed. The result is calculated separately at 6 and 12 months.</p>
+      </div>
     </section>
 
     <section class="verification" id="verification" aria-labelledby="verify-title">
