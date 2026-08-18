@@ -2,7 +2,7 @@
 
 A static, tamper-evident public record of timestamped equity thesis calls and their benchmark-relative outcomes.
 
-The website publishes no thesis documents. Fresh calls appear first as sealed commitments containing no ticker or direction. After the 30-day embargo, each call reveals its sanitized record and random salt. Git history supplies the third-party timestamp; `scripts/verify.py` proves the revealed content matches the earlier commitment.
+The website publishes no thesis documents. Fresh calls appear first as sealed commitments containing no ticker or direction. After the two-day embargo, each call reveals its sanitized record and random salt. Git history supplies the third-party timestamp; `scripts/verify.py` proves the revealed content matches the earlier commitment.
 
 ## Verify the record
 

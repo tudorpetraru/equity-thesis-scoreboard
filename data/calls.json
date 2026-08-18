@@ -4,39 +4,129 @@
       "call_id": "128dc61cc75d8dce",
       "commitment": "4d4f5dd41253be0f37d8b30060a7de535a6283a296d0e0f391f25c908283a3a3",
       "methodology_version": 1,
+      "record": {
+        "company": "Applied Optoelectronics, Inc.",
+        "conviction": "MEDIUM",
+        "generated_at": "2026-08-17T08:09:48Z",
+        "pdf_sha256": "e98a169599390d5ad73974a3a631cfa0edbf92be570edfce65cbb511947267c3",
+        "pdf_size_bytes": 238989,
+        "price_in_thesis": 150.0,
+        "provenance": "backfilled",
+        "rating": "HOLD",
+        "research_as_of": "2026-08-17T08:03:18.706471+00:00",
+        "schema_version": "2",
+        "stop_price": null,
+        "target_price": 165.0,
+        "thesis_statement": "Applied Optoelectronics is inflecting to non-GAAP profitability on an 800G/1.6T AI datacenter optics ramp that is production-capacity-constrained, not demand-constrained, through mid-2027: Q2 2026 revenue hit a record $191.9M (+86% YoY), Q3 is guided to $255-290M, and management reiterated ~$1.1B of 2026 revenue with >$140M of non-GAAP operating profit. The constraint is that after a ~+570% one-year run the stock already trades at ~21x trailing sales and richly discounts the 2027 capacity ramp, so at ~$150 the risk/reward is balanced and the rating is HOLD pending confirmation that 1.6T volumes and margin durability actually deliver the multi-year trajectory.",
+        "ticker": "AAOI",
+        "voided": null
+      },
+      "salt": "40d3332bdf0e65e343cf71a99ef72cc6",
       "sealed_at": "2026-08-18T04:10:24Z",
-      "state": "sealed"
+      "state": "revealed"
     },
     {
       "call_id": "1ba9f0c875c89dec",
       "commitment": "fd5bdf2f4b8f45cd9ef8809f34c1219c7b2d5342db2df6dabee74ca0dcd61be4",
       "methodology_version": 1,
+      "record": {
+        "company": "Oracle Corporation",
+        "conviction": "MEDIUM",
+        "generated_at": "2026-08-14T14:29:15Z",
+        "pdf_sha256": "7cd7678073c4ca8d0623f635580fd40c7939dffab1e6cf4f14659e1851128984",
+        "pdf_size_bytes": 269606,
+        "price_in_thesis": 156.22,
+        "provenance": "backfilled",
+        "rating": "HOLD",
+        "research_as_of": "2026-08-14T14:06:19.721769+00:00",
+        "schema_version": "2",
+        "stop_price": null,
+        "target_price": 185.0,
+        "thesis_statement": "Oracle is executing a genuine, multi-year AI-infrastructure land grab: FY2026 revenue +17% to $67.4B, IaaS +77% (Q4 +93%), and a record $638B of remaining performance obligations (+363% YoY, +$85B QoQ). But the build is debt- and equity-funded at an extreme scale: FY26 free cash flow was -$23.7B, capex is guided to $90-95B in FY27, and S&P (09-Jul-2026) downgraded the credit to BBB-/A-3 (one notch above junk, stable outlook), projecting a ~$42B FY27 free-operating-cash deficit and with roughly half of RPO - and most of the ~$260B of signed 15-19-year leases - hinging on a single counterparty, OpenAI. The stock has already fallen ~55% off its 10-Sep-2025 peak. At roughly 12-13x estimated FY27 EV/EBITDA the market is pricing in the build risk; the payoff (FCF inflection by FY2029, capex step-down, RPO-to-revenue conversion) is real but back-loaded and gated by funding costs and OpenAI concentration. Risk/reward is roughly balanced, so we hold until free-cash-flow and leverage trends confirm the conversion rather than pay up today for a back-loaded outcome.",
+        "ticker": "ORCL",
+        "voided": null
+      },
+      "salt": "7f491a55e9cac2971705e4c6986d4fa8",
       "sealed_at": "2026-08-18T04:10:24Z",
-      "state": "sealed"
+      "state": "revealed"
     },
     {
       "call_id": "68b21da81c849630",
       "commitment": "b74cce68c1c0c471a5552d3c10f5c979d7fbd6444aa8ad15e9cd6b3444105ffc",
       "methodology_version": 1,
+      "record": {
+        "company": "Telefonaktiebolaget LM Ericsson (publ)",
+        "conviction": "MEDIUM",
+        "generated_at": "2026-08-15T11:18:26Z",
+        "pdf_sha256": "713e8ed142b68836788b35b24e284419d8919944f421f4d64b34b37f5f058d43",
+        "pdf_size_bytes": 221818,
+        "price_in_thesis": 10.1,
+        "provenance": "backfilled",
+        "rating": "HOLD",
+        "research_as_of": "2026-08-15T11:11:55.103590+00:00",
+        "schema_version": "2",
+        "stop_price": 8.5,
+        "target_price": 10.75,
+        "thesis_statement": "Ericsson is a margin-recovering, cash-generative leadership franchise in RAN whose Networks adjusted gross margin (~48%) and Cloud Software turnaround underpin a solid core, but AI-driven memory-cost inflation, a money-losing Vonage/Enterprise unit, weak portfolio-company growth, and a CEO transition keep the near-term earnings path in doubt. The ADR trades around $10.10 with roughly flat risk/reward: valuation is fair on EV/EBITDA (~6-7x) and fully valued on forward P/E (~17x), so we expect the stock to grind sideways within a wide range until margin durability and the new CEO's direction are proven.",
+        "ticker": "ERIC",
+        "voided": null
+      },
+      "salt": "8d454f76e11456917ad8bff7ca6514c3",
       "sealed_at": "2026-08-18T04:10:24Z",
-      "state": "sealed"
+      "state": "revealed"
     },
     {
       "call_id": "72d4955197b70bf5",
       "commitment": "e594d6637bf3fc88bbc2ad1972a43f3113e7b1698b5aa7d5f58a14c81d5a98eb",
       "methodology_version": 1,
+      "record": {
+        "company": "Arbe Robotics Ltd.",
+        "conviction": "MEDIUM",
+        "generated_at": "2026-08-14T17:55:10Z",
+        "pdf_sha256": "2fc7d21365547c21091d35d5a3d6407c06c9773f686fa0ec783c0b5e28a60aa4",
+        "pdf_size_bytes": 256494,
+        "price_in_thesis": 0.75,
+        "provenance": "backfilled",
+        "rating": "HOLD",
+        "research_as_of": "2026-08-14T17:50:38.762607+00:00",
+        "schema_version": "2",
+        "stop_price": null,
+        "target_price": 1.1,
+        "thesis_statement": "Arbe holds a defensible position as a Tier-1 supplier of high-resolution 4D imaging radar for L2+/L3 ADAS and lower-L4 autonomy, anchored by a real HiRain joint-venture design win with a Chinese state-owned OEM that starts production in early 2027. The stock screens cheap against cash plus commercialization optionality (~$93M cap vs. ~$42M cash), but a thin ~15-month runway, pre-revenue automotive scale, and an SOP timing that has already slipped once make the risk/reward balanced rather than compelling; we rate HOLD pending evidence that the 2027 automotive ramp and defense/rail revenue both convert.",
+        "ticker": "ARBE",
+        "voided": null
+      },
+      "salt": "4e330e7472b97e973ce358795962124f",
       "sealed_at": "2026-08-18T04:10:24Z",
-      "state": "sealed"
+      "state": "revealed"
     },
     {
       "call_id": "87f98dee38bbce29",
       "commitment": "3d1868cd1ebfc8bdb9d2e42cf807325f4823a0163534cae54309ca323accc416",
       "methodology_version": 1,
+      "record": {
+        "company": "Telefonaktiebolaget LM Ericsson (publ)",
+        "conviction": "MEDIUM",
+        "generated_at": "2026-08-17T10:22:34Z",
+        "pdf_sha256": "8c28a3df8a2b4cae0d379dfcadcb84736ed8c119e0038618a7d73f4cb12b2bbc",
+        "pdf_size_bytes": 243882,
+        "price_in_thesis": 10.27,
+        "provenance": "backfilled",
+        "rating": "HOLD",
+        "research_as_of": "2026-08-17T10:15:16.781569+00:00",
+        "schema_version": "2",
+        "stop_price": 8.5,
+        "target_price": 11.0,
+        "thesis_statement": "Ericsson pairs a dominant, structurally protected Western-aligned RAN franchise (~36% share excluding China per Omdia) with cost execution that has lifted adjusted gross margin to ~48% and delivered nine consecutive quarters of adjusted EBITA margin expansion, backed by SEK 59.8b of net cash, a SEK 3.00 dividend and a SEK 15b buyback. The offsetting reality is a flat RAN market, component-cost inflation guided to pressure Networks margins (48–50% in Q3 vs 50.4% in Q2), FX and elevated restructuring drag, and consensus targets (~$9.7) sitting below the current price. With modest, independently derived upside of ~7% and an uncertain near-term catalyst path, we rate ERIC HOLD: the quality is real but the margin-recovery story is largely priced.",
+        "ticker": "ERIC",
+        "voided": null
+      },
+      "salt": "42d0e1bf2939ab602015162b682aefae",
       "sealed_at": "2026-08-18T04:10:24Z",
-      "state": "sealed"
+      "state": "revealed"
     }
   ],
-  "embargo_days": 30,
+  "embargo_days": 2,
   "format_version": 1,
   "methodology_version": 1
 }
