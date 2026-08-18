@@ -23,6 +23,7 @@ The commitment convention is SHA-256 over UTF-8 `canonical_json(record) + salt`.
 - Horizons: 182 and 365 calendar days after entry. Each uses the last close on or before the horizon date.
 - Excess return: `(P_h / P_0 - 1) - (B_h / B_0 - 1)`.
 - Buy and strong-buy calls are correct when excess return is positive. Sell and strong-sell calls are correct when it is negative. Hold is correct when absolute excess return is at most five percentage points.
+- Source `AVOID` calls normalize to `STRONG_SELL`; source `MEDIUM-HIGH` conviction normalizes conservatively to `MEDIUM` so every usable source call fits the frozen public contract.
 - Pending horizons are not scored. Delistings or acquisitions use the last available close and are flagged.
 - Target and stop crossings use daily closes and are informational only.
 - Headline aggregates include revealed, non-voided, live calls only. Backfilled calls remain visually separate and are excluded.
