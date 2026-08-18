@@ -30,8 +30,8 @@
     },
     "live_revealed": 0,
     "revealed": 15,
-    "sealed": 0,
-    "total": 15,
+    "sealed": 3,
+    "total": 18,
     "voided": 0
   },
   "calls": {
@@ -327,7 +327,7 @@
       }
     }
   },
-  "computed_at": "2026-08-18T05:47:10Z",
+  "computed_at": "2026-08-18T11:22:36Z",
   "format_version": 1,
   "methodology_version": 1
 }
