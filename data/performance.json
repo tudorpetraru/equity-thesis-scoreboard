@@ -1,0 +1,41 @@
+{
+  "aggregates": {
+    "backfilled": 0,
+    "by_rating": {},
+    "horizons": {
+      "12m": {
+        "by_rating": {},
+        "by_rating_class": {},
+        "correct": 0,
+        "equal_weight_excess_return": null,
+        "hit_rate": null,
+        "incorrect": 0,
+        "mean_excess_return": null,
+        "median_excess_return": null,
+        "n": 0,
+        "pending": 0
+      },
+      "6m": {
+        "by_rating": {},
+        "by_rating_class": {},
+        "correct": 0,
+        "equal_weight_excess_return": null,
+        "hit_rate": null,
+        "incorrect": 0,
+        "mean_excess_return": null,
+        "median_excess_return": null,
+        "n": 0,
+        "pending": 0
+      }
+    },
+    "live_revealed": 0,
+    "revealed": 0,
+    "sealed": 0,
+    "total": 0,
+    "voided": 0
+  },
+  "calls": {},
+  "computed_at": "2026-08-18T04:01:40Z",
+  "format_version": 1,
+  "methodology_version": 1
+}

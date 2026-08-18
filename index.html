@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A public, tamper-evident record of timestamped equity thesis calls and their benchmark-relative outcomes.">
+  <meta name="theme-color" content="#102c2b">
+  <meta property="og:title" content="Equity Thesis Track Record">
+  <meta property="og:description" content="Timestamped calls, frozen rules, and independently verifiable outcomes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tudorpetraru.github.io/equity-thesis-scoreboard/">
+  <meta property="og:image" content="https://tudorpetraru.github.io/equity-thesis-scoreboard/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Equity Thesis Track Record">
+  <meta name="twitter:description" content="Timestamped calls, frozen rules, and independently verifiable outcomes.">
+  <meta name="twitter:image" content="https://tudorpetraru.github.io/equity-thesis-scoreboard/og.png">
+  <title>Equity Thesis Track Record</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Equity Thesis Track Record home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>ET/TR</span>
+      </a>
+      <div class="nav-links">
+        <a href="#calls">Calls</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#verification">Verify</a>
+      </div>
+      <span class="version">Methodology v1</span>
+    </nav>
+
+    <div class="hero-copy shell" id="top">
+      <p class="eyebrow">Public accountability ledger</p>
+      <h1>Equity Thesis<br><em>Track Record</em></h1>
+      <p class="lede">Timestamped calls. Frozen rules. Benchmark-relative outcomes. Every revealed record can be independently checked against the proof published before its contents were known.</p>
+      <a class="text-link" href="#verification">How the proof works <span aria-hidden="true">↘</span></a>
+    </div>
+    <div class="hero-rule shell" aria-hidden="true"><span></span><b>01</b></div>
+  </header>
+
+  <main>
+    <section class="summary shell" aria-labelledby="summary-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current record</p>
+          <h2 id="summary-title">Performance at a glance</h2>
+        </div>
+        <p id="updated-at" class="updated">Awaiting first refresh</p>
+      </div>
+      <div class="stat-grid" aria-live="polite">
+        <article class="stat-card stat-primary"><span>Revealed calls</span><strong id="stat-revealed">0</strong><small>Public records</small></article>
+        <article class="stat-card"><span>Open horizons</span><strong id="stat-pending">0</strong><small>Awaiting maturity</small></article>
+        <article class="stat-card"><span>Sealed calls</span><strong id="stat-sealed">0</strong><small>Awaiting reveal</small></article>
+        <article class="stat-card"><span>6m hit rate</span><strong id="stat-hit-6m">—</strong><small id="stat-n-6m">No resolved calls</small></article>
+        <article class="stat-card"><span>12m hit rate</span><strong id="stat-hit-12m">—</strong><small id="stat-n-12m">No resolved calls</small></article>
+        <article class="stat-card"><span>12m median excess</span><strong id="stat-median-12m">—</strong><small>Versus SPY</small></article>
+      </div>
+      <div class="sealed-banner">
+        <div class="seal-orbit" aria-hidden="true"><span></span></div>
+        <div><strong id="sealed-count">0 calls sealed, awaiting reveal</strong><p>Contents remain hidden during the embargo. Their commitments are already timestamped in public history.</p></div>
+        <a href="#verification">Inspect the method</a>
+      </div>
+    </section>
+
+    <section class="record-section" id="calls" aria-labelledby="calls-title">
+      <div class="shell">
+        <div class="section-heading light-heading">
+          <div><p class="eyebrow">The ledger</p><h2 id="calls-title">Revealed calls</h2></div>
+          <p>Click a column heading to sort. Returns are excess returns versus SPY.</p>
+        </div>
+        <div class="table-wrap">
+          <table id="live-table">
+            <thead><tr>
+              <th data-sort="date" aria-sort="descending">Date</th>
+              <th data-sort="ticker">Ticker</th>
+              <th data-sort="rating">Rating</th>
+              <th data-sort="conviction">Conviction</th>
+              <th data-sort="entry">Entry</th>
+              <th data-sort="target">Target</th>
+              <th data-sort="six">6m excess</th>
+              <th data-sort="twelve">12m excess</th>
+              <th data-sort="outcome">Target / stop</th>
+              <th data-sort="latency">Seal latency</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+          <p class="empty-state" id="live-empty">No live calls have been revealed yet. Sealed calls will appear here after the embargo.</p>
+        </div>
+
+        <div class="scatter-panel">
+          <div><p class="eyebrow">Distribution</p><h3>Excess-return scatter</h3><p>Each point is one resolved live call. The center line is SPY.</p></div>
+          <canvas id="scatter" width="800" height="260" aria-label="Scatter plot of six- and twelve-month excess returns"></canvas>
+        </div>
+
+        <div class="backfill-block" id="backfilled">
+          <div class="backfill-heading"><div><p class="eyebrow">Separate record</p><h3>Backfilled calls</h3></div><p>Recorded after the fact; timestamps are not independently verifiable.</p></div>
+          <div class="table-wrap">
+            <table id="backfill-table">
+              <thead><tr>
+                <th data-sort="date" aria-sort="descending">Date</th><th data-sort="ticker">Ticker</th><th data-sort="rating">Rating</th>
+                <th data-sort="conviction">Conviction</th><th data-sort="entry">Entry</th><th data-sort="target">Target</th>
+                <th data-sort="six">6m excess</th><th data-sort="twelve">12m excess</th><th data-sort="outcome">Target / stop</th><th data-sort="latency">Seal latency</th>
+              </tr></thead>
+              <tbody></tbody>
+            </table>
+            <p class="empty-state" id="backfill-empty">No backfilled calls are published.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="method shell" id="methodology" aria-labelledby="method-title">
+      <div class="method-intro">
+        <p class="eyebrow">Frozen methodology</p>
+        <h2 id="method-title">Rules set before<br>results arrive.</h2>
+        <p>Version 1 results are never recomputed under future rule changes. Backfilled and voided calls are excluded from headline aggregates.</p>
+      </div>
+      <div class="method-grid">
+        <article><span>01</span><h3>Adjusted daily data</h3><p>Daily dividend- and split-adjusted closes from Yahoo Finance chart data, with Stooq daily closes as an automatic fallback. Fallback records are flagged as not dividend-adjusted. SPY is the benchmark.</p></article>
+        <article><span>02</span><h3>Deterministic entry</h3><p>Entry is the adjusted close of the first trading session whose close occurs at or after generation. SPY uses that same session. There is no intraday selection.</p></article>
+        <article><span>03</span><h3>Fixed horizons</h3><p>Six months means 182 calendar days; twelve months means 365. Each horizon uses the last available adjusted close on or before its date.</p></article>
+        <article><span>04</span><h3>Benchmark verdict</h3><p>Buy calls are correct when excess return is positive; sell calls when it is negative. Hold is correct inside an inclusive ±5 percentage-point band.</p></article>
+        <article><span>05</span><h3>Target and stop</h3><p>Daily closes are walked forward from entry. The first target crossing or stop breach is shown separately and never changes the correct-or-incorrect verdict.</p></article>
+        <article><span>06</span><h3>Edge cases</h3><p>Unmatured horizons remain pending. A delisting or acquisition uses the last available close and is flagged. Missing data is visible and does not break the record.</p></article>
+      </div>
+      <div class="formula" aria-label="Excess return formula"><span>EXCESS RETURN</span><strong>(Pₕ / P₀ − 1) − (Bₕ / B₀ − 1)</strong></div>
+    </section>
+
+    <section class="verification" id="verification" aria-labelledby="verify-title">
+      <div class="shell verification-grid">
+        <div>
+          <p class="eyebrow">Independent verification</p>
+          <h2 id="verify-title">Trust the proof,<br>not the publisher.</h2>
+          <p class="verify-lede">A call is committed publicly while its contents remain hidden. After the embargo, the record and a random salt are revealed. Recomputing the hash proves the revealed contents match the earlier commitment.</p>
+        </div>
+        <ol class="proof-steps">
+          <li><span>1</span><div><h3>Find the seal</h3><p>Open the history for <code>data/calls.json</code> and locate the commit where the call identifier and commitment first appeared.</p></div></li>
+          <li><span>2</span><div><h3>Run the verifier</h3><pre><code>python3 scripts/verify.py
+python3 scripts/verify.py --call-id &lt;id&gt;</code></pre></div></li>
+          <li><span>3</span><div><h3>Confirm the match</h3><p>The script canonicalizes the revealed record, adds its salt, and reports whether the SHA-256 commitment matches.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="disclosure shell" aria-labelledby="disclosure-title">
+      <p class="eyebrow">Permanent disclosure</p>
+      <h2 id="disclosure-title">Read the record in context.</h2>
+      <div class="disclosure-grid">
+        <p>These documents are AI-generated research, not investment advice or a personal recommendation. No position disclosures are implied.</p>
+        <p>Tickers are user-requested, so the sample is biased toward popular names and is not a systematic or investable portfolio.</p>
+        <p>Past performance does not predict future results. Price targets and stop levels are informational, not execution instructions.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="shell"><span>Equity Thesis Track Record</span><span>Methodology v1 · Public verification ledger</span></div></footer>
+</body>
+</html>

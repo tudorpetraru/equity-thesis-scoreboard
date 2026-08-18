@@ -1,0 +1,35 @@
+name: Validate public data
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate current contract
+        run: python3 scripts/validate.py data/calls.json
+      - name: Enforce privacy gate
+        env:
+          PRIVATE_NAME_SHA256: ${{ secrets.PRIVATE_NAME_SHA256 }}
+        run: python3 scripts/sanitize.py .
+      - name: Enforce append-only history
+        shell: bash
+        run: |
+          if git rev-parse --verify HEAD^ >/dev/null 2>&1 && git show HEAD^:data/calls.json > /tmp/previous-calls.json 2>/dev/null; then
+            python3 scripts/validate.py data/calls.json --previous /tmp/previous-calls.json
+          else
+            echo "No prior calls.json in the immediate parent."
+          fi

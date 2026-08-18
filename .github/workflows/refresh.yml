@@ -1,0 +1,43 @@
+name: Refresh performance
+
+on:
+  schedule:
+    - cron: "23 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: performance-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Recompute performance
+        run: python3 scripts/score.py
+      - name: Validate output
+        env:
+          PRIVATE_NAME_SHA256: ${{ secrets.PRIVATE_NAME_SHA256 }}
+        run: |
+          python3 scripts/validate.py data/calls.json
+          python3 scripts/sanitize.py .
+          python3 -m unittest discover -s tests -v
+      - name: Commit changed performance
+        shell: bash
+        run: |
+          if git diff --quiet -- data/performance.json; then
+            echo "No performance changes."
+            exit 0
+          fi
+          git config user.name "scoreboard-refresh"
+          git config user.email "scoreboard-refresh@users.noreply.github.com"
+          git add -- data/performance.json
+          git commit -m "data: refresh public performance"
+          git push
