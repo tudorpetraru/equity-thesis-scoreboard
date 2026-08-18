@@ -30,12 +30,12 @@
     },
     "live_revealed": 0,
     "revealed": 0,
-    "sealed": 0,
-    "total": 0,
+    "sealed": 5,
+    "total": 5,
     "voided": 0
   },
   "calls": {},
-  "computed_at": "2026-08-18T04:01:40Z",
+  "computed_at": "2026-08-18T04:10:42Z",
   "format_version": 1,
   "methodology_version": 1
 }
