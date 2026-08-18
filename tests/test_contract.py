@@ -37,6 +37,12 @@ class ContractTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate(payload(entry))
 
+    def test_schema_accepts_medium_high_conviction(self):
+        row = record()
+        row["conviction"] = "MEDIUM-HIGH"
+        entry = {"call_id": "1" * 16, "state": "revealed", "sealed_at": "2026-01-01T12:00:00Z", "commitment": "a" * 64, "methodology_version": 1, "salt": "b" * 32, "record": row}
+        validate(payload(entry))
+
     def test_append_only_allows_reveal_but_rejects_edit(self):
         sealed = {"call_id": "1" * 16, "state": "sealed", "sealed_at": "2026-01-01T12:00:00Z", "commitment": "a" * 64, "methodology_version": 1}
         revealed = dict(sealed, state="revealed", salt="b" * 32, record=record())

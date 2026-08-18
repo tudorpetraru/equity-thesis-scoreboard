@@ -19,7 +19,7 @@ RECORD_KEYS = {
     "pdf_size_bytes", "schema_version", "provenance", "voided",
 }
 RATINGS = {"STRONG_BUY", "BUY", "HOLD", "SELL", "STRONG_SELL"}
-CONVICTIONS = {"HIGH", "MEDIUM", "LOW"}
+CONVICTIONS = {"HIGH", "MEDIUM-HIGH", "MEDIUM", "LOW"}
 ISO_RE = re.compile(r"^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$")
 HEX_RE = re.compile(r"^[0-9a-f]+$")
 
