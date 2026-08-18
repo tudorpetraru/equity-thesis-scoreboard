@@ -1,6 +1,6 @@
 {
   "aggregates": {
-    "backfilled": 7,
+    "backfilled": 15,
     "by_rating": {},
     "horizons": {
       "12m": {
@@ -29,8 +29,8 @@
       }
     },
     "live_revealed": 0,
-    "revealed": 7,
-    "sealed": 8,
+    "revealed": 15,
+    "sealed": 0,
     "total": 15,
     "voided": 0
   },
@@ -117,6 +117,86 @@
         "target_date": null
       }
     },
+    "22261f41ab595819": {
+      "benchmark_entry_price": null,
+      "benchmark_source": "Yahoo Finance chart",
+      "data_gap": true,
+      "delisted": false,
+      "dividend_adjusted": true,
+      "entry_date": null,
+      "entry_price": null,
+      "horizons": {},
+      "price_source": "Yahoo Finance chart",
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
+    "25f88c017048b133": {
+      "benchmark_entry_price": null,
+      "benchmark_source": null,
+      "data_gap": true,
+      "delisted": false,
+      "dividend_adjusted": null,
+      "entry_date": null,
+      "entry_price": null,
+      "horizons": {},
+      "price_source": null,
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
+    "2b7aa34ffcaff6f6": {
+      "benchmark_entry_price": null,
+      "benchmark_source": "Yahoo Finance chart",
+      "data_gap": true,
+      "delisted": false,
+      "dividend_adjusted": true,
+      "entry_date": null,
+      "entry_price": null,
+      "horizons": {},
+      "price_source": "Yahoo Finance chart",
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
+    "2e37aaba0224d740": {
+      "benchmark_entry_price": null,
+      "benchmark_source": null,
+      "data_gap": true,
+      "delisted": false,
+      "dividend_adjusted": null,
+      "entry_date": null,
+      "entry_price": null,
+      "horizons": {},
+      "price_source": null,
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
+    "5e177f126a0cadf4": {
+      "benchmark_entry_price": null,
+      "benchmark_source": null,
+      "data_gap": true,
+      "delisted": false,
+      "dividend_adjusted": null,
+      "entry_date": null,
+      "entry_price": null,
+      "horizons": {},
+      "price_source": null,
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
     "68b21da81c849630": {
       "benchmark_entry_price": null,
       "benchmark_source": "Yahoo Finance chart",
@@ -166,7 +246,55 @@
         "target_date": null
       }
     },
+    "80c16fc01835add7": {
+      "benchmark_entry_price": null,
+      "benchmark_source": "Yahoo Finance chart",
+      "data_gap": true,
+      "delisted": false,
+      "dividend_adjusted": true,
+      "entry_date": null,
+      "entry_price": null,
+      "horizons": {},
+      "price_source": "Yahoo Finance chart",
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
     "87f98dee38bbce29": {
+      "benchmark_entry_price": null,
+      "benchmark_source": "Yahoo Finance chart",
+      "data_gap": true,
+      "delisted": false,
+      "dividend_adjusted": true,
+      "entry_date": null,
+      "entry_price": null,
+      "horizons": {},
+      "price_source": "Yahoo Finance chart",
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
+    "8be01fe830cf532c": {
+      "benchmark_entry_price": null,
+      "benchmark_source": "Yahoo Finance chart",
+      "data_gap": true,
+      "delisted": false,
+      "dividend_adjusted": true,
+      "entry_date": null,
+      "entry_price": null,
+      "horizons": {},
+      "price_source": "Yahoo Finance chart",
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
+    "9acd90d424d1a3ea": {
       "benchmark_entry_price": null,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": true,
@@ -199,7 +327,7 @@
       }
     }
   },
-  "computed_at": "2026-08-18T04:27:25Z",
+  "computed_at": "2026-08-18T04:38:55Z",
   "format_version": 1,
   "methodology_version": 1
 }
