@@ -1,6 +1,6 @@
 {
   "aggregates": {
-    "backfilled": 5,
+    "backfilled": 7,
     "by_rating": {},
     "horizons": {
       "12m": {
@@ -29,9 +29,9 @@
       }
     },
     "live_revealed": 0,
-    "revealed": 5,
-    "sealed": 0,
-    "total": 5,
+    "revealed": 7,
+    "sealed": 8,
+    "total": 15,
     "voided": 0
   },
   "calls": {
@@ -44,6 +44,39 @@
       "entry_date": null,
       "entry_price": null,
       "horizons": {},
+      "price_source": "Yahoo Finance chart",
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
+    "19053c0be69ff59a": {
+      "benchmark_entry_price": 776.340027,
+      "benchmark_source": "Yahoo Finance chart",
+      "data_gap": false,
+      "delisted": false,
+      "dividend_adjusted": true,
+      "entry_date": "2026-08-14",
+      "entry_price": 29.049999,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-14",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-12",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
         "outcome": "not_evaluable",
@@ -148,9 +181,25 @@
         "stop_date": null,
         "target_date": null
       }
+    },
+    "e4526c1eb624fdb3": {
+      "benchmark_entry_price": null,
+      "benchmark_source": "Yahoo Finance chart",
+      "data_gap": true,
+      "delisted": false,
+      "dividend_adjusted": true,
+      "entry_date": null,
+      "entry_price": null,
+      "horizons": {},
+      "price_source": "Yahoo Finance chart",
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
     }
   },
-  "computed_at": "2026-08-18T04:17:37Z",
+  "computed_at": "2026-08-18T04:27:25Z",
   "format_version": 1,
   "methodology_version": 1
 }
