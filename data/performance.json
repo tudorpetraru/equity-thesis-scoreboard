@@ -36,14 +36,31 @@
   },
   "calls": {
     "128dc61cc75d8dce": {
-      "benchmark_entry_price": null,
+      "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
-      "data_gap": true,
+      "data_gap": false,
       "delisted": false,
       "dividend_adjusted": true,
-      "entry_date": null,
-      "entry_price": null,
-      "horizons": {},
+      "entry_date": "2026-08-17",
+      "entry_price": 154.889999,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-17",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-15",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
         "outcome": "not_evaluable",
@@ -118,14 +135,31 @@
       }
     },
     "22261f41ab595819": {
-      "benchmark_entry_price": null,
+      "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
-      "data_gap": true,
+      "data_gap": false,
       "delisted": false,
       "dividend_adjusted": true,
-      "entry_date": null,
-      "entry_price": null,
-      "horizons": {},
+      "entry_date": "2026-08-17",
+      "entry_price": 225.009995,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-17",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-15",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
         "outcome": "not_evaluable",
@@ -150,17 +184,34 @@
       }
     },
     "2b7aa34ffcaff6f6": {
-      "benchmark_entry_price": null,
+      "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
-      "data_gap": true,
+      "data_gap": false,
       "delisted": false,
       "dividend_adjusted": true,
-      "entry_date": null,
-      "entry_price": null,
-      "horizons": {},
+      "entry_date": "2026-08-17",
+      "entry_price": 171.380005,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-17",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-15",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
-        "outcome": "not_evaluable",
+        "outcome": "both_pending",
         "stop_date": null,
         "target_date": null
       }
@@ -198,17 +249,34 @@
       }
     },
     "68b21da81c849630": {
-      "benchmark_entry_price": null,
+      "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
-      "data_gap": true,
+      "data_gap": false,
       "delisted": false,
       "dividend_adjusted": true,
-      "entry_date": null,
-      "entry_price": null,
-      "horizons": {},
+      "entry_date": "2026-08-17",
+      "entry_price": 10.17,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-17",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-15",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
-        "outcome": "not_evaluable",
+        "outcome": "both_pending",
         "stop_date": null,
         "target_date": null
       }
@@ -247,14 +315,31 @@
       }
     },
     "80c16fc01835add7": {
-      "benchmark_entry_price": null,
+      "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
-      "data_gap": true,
+      "data_gap": false,
       "delisted": false,
       "dividend_adjusted": true,
-      "entry_date": null,
-      "entry_price": null,
-      "horizons": {},
+      "entry_date": "2026-08-17",
+      "entry_price": 29.68,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-17",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-15",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
         "outcome": "not_evaluable",
@@ -263,30 +348,64 @@
       }
     },
     "87f98dee38bbce29": {
-      "benchmark_entry_price": null,
+      "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
-      "data_gap": true,
+      "data_gap": false,
       "delisted": false,
       "dividend_adjusted": true,
-      "entry_date": null,
-      "entry_price": null,
-      "horizons": {},
+      "entry_date": "2026-08-17",
+      "entry_price": 10.17,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-17",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-15",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
-        "outcome": "not_evaluable",
+        "outcome": "both_pending",
         "stop_date": null,
         "target_date": null
       }
     },
     "8be01fe830cf532c": {
-      "benchmark_entry_price": null,
+      "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
-      "data_gap": true,
+      "data_gap": false,
       "delisted": false,
       "dividend_adjusted": true,
-      "entry_date": null,
-      "entry_price": null,
-      "horizons": {},
+      "entry_date": "2026-08-17",
+      "entry_price": 480.350006,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-17",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-15",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
         "outcome": "not_evaluable",
@@ -295,14 +414,31 @@
       }
     },
     "9acd90d424d1a3ea": {
-      "benchmark_entry_price": null,
+      "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
-      "data_gap": true,
+      "data_gap": false,
       "delisted": false,
       "dividend_adjusted": true,
-      "entry_date": null,
-      "entry_price": null,
-      "horizons": {},
+      "entry_date": "2026-08-17",
+      "entry_price": 1011.75,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-17",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-15",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
         "outcome": "not_evaluable",
@@ -311,14 +447,31 @@
       }
     },
     "e4526c1eb624fdb3": {
-      "benchmark_entry_price": null,
+      "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
-      "data_gap": true,
+      "data_gap": false,
       "delisted": false,
       "dividend_adjusted": true,
-      "entry_date": null,
-      "entry_price": null,
-      "horizons": {},
+      "entry_date": "2026-08-17",
+      "entry_price": 146.229996,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-17",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-15",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
         "outcome": "not_evaluable",
@@ -327,7 +480,7 @@
       }
     }
   },
-  "computed_at": "2026-08-18T11:22:36Z",
+  "computed_at": "2026-08-19T05:48:37Z",
   "format_version": 1,
   "methodology_version": 1
 }
