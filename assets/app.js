@@ -1,6 +1,7 @@
 (() => {
   "use strict";
-  const state = { revealed: [], sort: ["date", -1] };
+  const PAGE_SIZE = 20;
+  const state = { revealed: [], sort: ["date", -1], page: 1 };
   const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 2 });
   const dateFmt = new Intl.DateTimeFormat("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
   const $ = (id) => document.getElementById(id);
@@ -105,17 +106,37 @@
       const bv = sortValue(b, key);
       return (typeof av === "string" ? av.localeCompare(bv) : av - bv) * direction;
     });
-    rows.forEach((item) => body.append(rowView(item)));
+    const pageCount = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+    state.page = Math.min(state.page, pageCount);
+    const start = (state.page - 1) * PAGE_SIZE;
+    const pageRows = rows.slice(start, start + PAGE_SIZE);
+    pageRows.forEach((item) => body.append(rowView(item)));
     $("calls-empty").hidden = rows.length > 0;
+    $("calls-pagination").hidden = rows.length === 0;
+    const firstVisible = rows.length ? start + 1 : 0;
+    $("calls-page-status").textContent = "Showing " + firstVisible + "–" + (start + pageRows.length) + " of " + rows.length;
+    $("calls-page-number").textContent = "Page " + state.page + " of " + pageCount;
+    $("calls-prev").disabled = state.page === 1;
+    $("calls-next").disabled = state.page === pageCount;
   }
   function wireSort(tableId) {
     document.querySelectorAll("#" + tableId + " th").forEach((th) => th.addEventListener("click", () => {
       const key = th.dataset.sort;
       state.sort = state.sort[0] === key ? [key, state.sort[1] * -1] : [key, 1];
+      state.page = 1;
       document.querySelectorAll("#" + tableId + " th").forEach((node) => node.removeAttribute("aria-sort"));
       th.setAttribute("aria-sort", state.sort[1] === 1 ? "ascending" : "descending");
       renderTable();
     }));
+  }
+  function changePage(delta) {
+    const pageCount = Math.max(1, Math.ceil(state.revealed.length / PAGE_SIZE));
+    const nextPage = Math.min(pageCount, Math.max(1, state.page + delta));
+    if (nextPage === state.page) return;
+    state.page = nextPage;
+    renderTable();
+    const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    $("calls-table").closest(".table-wrap").scrollIntoView({ behavior, block: "start" });
   }
   function summary(performance, calls) {
     const aggregate = performance.aggregates || {};
@@ -213,5 +234,7 @@
     }
   }
   wireSort("calls-table");
+  $("calls-prev").addEventListener("click", () => changePage(-1));
+  $("calls-next").addEventListener("click", () => changePage(1));
   init();
 })();
