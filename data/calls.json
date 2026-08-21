@@ -379,21 +379,117 @@
       "call_id": "0c3087b6f697bf42",
       "commitment": "36a0051811d7d9a85917ed2be93942e670d1f1790d59e23f6c6751a608d23dd2",
       "methodology_version": 1,
+      "record": {
+        "company": "Taiwan Semiconductor Manufacturing Company (TSMC)",
+        "conviction": "MEDIUM-HIGH",
+        "generated_at": "2026-08-18T10:02:05Z",
+        "pdf_sha256": "17642c474e98d4aced43e0511b409e57ee1f91ed129868b5be4580f2768a1001",
+        "pdf_size_bytes": 184410,
+        "price_in_thesis": 431.0,
+        "provenance": "live",
+        "rating": "BUY",
+        "research_as_of": "2026-08-18T10:02:05.164539+00:00",
+        "schema_version": "2",
+        "stop_price": 364.0,
+        "target_price": 545.0,
+        "thesis_statement": "TSMC sits at the structural bottleneck of AI compute: it manufactures essentially all leading-edge AI accelerators and CPUs at 2nm/3nm, holds over 90% of leading-edge foundry share, and is raising FY2026 revenue growth guidance to >40% with Q3 2026 guided to US$44.6-45.8B. We value it on normalized forward EPS (28-30x FY2027E) rather than consensus targets, and with ~26% upside to $545 we see the premium multiple as justified by AI-led compound earnings growth, technology leadership, and customer concentration that is being deliberately broadened.",
+        "ticker": "TSM",
+        "voided": null
+      },
+      "salt": "2d6be1a2bc14b1e569980645b335c9b7",
       "sealed_at": "2026-08-18T11:21:37Z",
-      "state": "sealed"
+      "state": "revealed"
     },
     {
       "call_id": "6130cb4b5cb31e41",
       "commitment": "3db0053239a25bde8aa44d1366b78dd10defa72288b08e63415edf40899d141e",
       "methodology_version": 1,
+      "record": {
+        "company": "Morgan Stanley",
+        "conviction": "MEDIUM-HIGH",
+        "generated_at": "2026-08-18T10:02:19Z",
+        "pdf_sha256": "d6ea2859b2722510849d6ecc8402ae1968dd901aeba93774e6f78ba116176347",
+        "pdf_size_bytes": 182076,
+        "price_in_thesis": 218.21,
+        "provenance": "live",
+        "rating": "HOLD",
+        "research_as_of": "2026-08-18T09:58:46.753639+00:00",
+        "schema_version": "2",
+        "stop_price": null,
+        "target_price": 230.0,
+        "thesis_statement": "Morgan Stanley is a best-in-class wealth-led financial franchise with an $8T wealth client base, a record $148B quarter of net new assets, and a 26.6% ROTCE proving the fee-based flywheel. The stock has already re-rated to roughly 18x forward earnings and ~4.1x tangible book, trading near its 52-week high, and consensus upside is only ~5-9% against a meaningful downside if markets-dependent revenue normalizes. Quality is excellent but the setup is fairly priced, so we hold rather than chase.",
+        "ticker": "MS",
+        "voided": null
+      },
+      "salt": "4a791c7a5a59c1c3c257497e3257c83f",
       "sealed_at": "2026-08-18T11:21:37Z",
-      "state": "sealed"
+      "state": "revealed"
     },
     {
       "call_id": "88029a38f414db3b",
       "commitment": "b683d3fd8ffbd37320d71422f58a03d29b9d154e410e381e57d230d9ea06b087",
       "methodology_version": 1,
+      "record": {
+        "company": "Broadcom Inc.",
+        "conviction": "MEDIUM-HIGH",
+        "generated_at": "2026-08-18T10:20:13Z",
+        "pdf_sha256": "8da3e73f28e13e0173f8f52ddc282ff9e37dd5db650b75ed6e8dc3b91cf86ef5",
+        "pdf_size_bytes": 228509,
+        "price_in_thesis": 392.43,
+        "provenance": "live",
+        "rating": "BUY",
+        "research_as_of": "2026-08-18T10:03:48.561453+00:00",
+        "schema_version": "2",
+        "stop_price": null,
+        "target_price": 465.0,
+        "thesis_statement": "Broadcom is converting hyperscaler AI capex into a two-engine earnings stream: custom accelerators and networking are accelerating sharply while VMware supplies high-margin recurring cash flow. At $392.43, the market is already pricing meaningful execution, but the September Q3 print and a still-visible custom-silicon ramp can support a consolidated FY27 normalized-EPS value of $465; the thesis breaks if AI revenue or margins reset before the next design cycle.",
+        "ticker": "AVGO",
+        "voided": null
+      },
+      "salt": "fc53c84d4cbbb8f085cbdc2701120861",
       "sealed_at": "2026-08-18T11:21:37Z",
+      "state": "revealed"
+    },
+    {
+      "call_id": "52b2931333d09451",
+      "commitment": "af548cc4377cbddcf07983efd9ff8fa30ab941ea8a5b5ecdc5938e2609033453",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-21T10:44:45Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "63696538456dcd81",
+      "commitment": "e709558ee15532e188c9be5ef18a14727b0818ecee5a0206d58eee440b82b0e8",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-21T10:44:45Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "85865cb6dafac147",
+      "commitment": "525119f70cd0d778aefa68bc0816b7862cbe4cf42ebc6a1d0c865527e03aa94b",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-21T10:44:45Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "9d004800e343f54f",
+      "commitment": "79deb1f275d31bea42913b2c05186d89017565769cf36a1c8da569fb375a2ce9",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-21T10:44:45Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "9ec8d4099c9ccb18",
+      "commitment": "afcd502d859a0afee3f3910e1b4dde975ac22b5f3001992ba08a7060c84a487e",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-21T10:44:45Z",
+      "state": "sealed"
+    },
+    {
+      "call_id": "b061e9b7f9fa1580",
+      "commitment": "75f2186558795b2fccd41a3ef3d69c641b337307b02e18eeeea4d376abe94ef6",
+      "methodology_version": 1,
+      "sealed_at": "2026-08-21T10:44:45Z",
       "state": "sealed"
     }
   ],
