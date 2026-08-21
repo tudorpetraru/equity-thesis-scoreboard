@@ -1,7 +1,10 @@
 {
   "aggregates": {
     "backfilled": 15,
-    "by_rating": {},
+    "by_rating": {
+      "BUY": 2,
+      "HOLD": 1
+    },
     "horizons": {
       "12m": {
         "by_rating": {},
@@ -13,7 +16,7 @@
         "mean_excess_return": null,
         "median_excess_return": null,
         "n": 0,
-        "pending": 0
+        "pending": 3
       },
       "6m": {
         "by_rating": {},
@@ -25,16 +28,49 @@
         "mean_excess_return": null,
         "median_excess_return": null,
         "n": 0,
-        "pending": 0
+        "pending": 3
       }
     },
-    "live_revealed": 0,
-    "revealed": 15,
-    "sealed": 3,
-    "total": 18,
+    "live_revealed": 3,
+    "revealed": 18,
+    "sealed": 6,
+    "total": 24,
     "voided": 0
   },
   "calls": {
+    "0c3087b6f697bf42": {
+      "benchmark_entry_price": 767.450012,
+      "benchmark_source": "Yahoo Finance chart",
+      "data_gap": false,
+      "delisted": false,
+      "dividend_adjusted": true,
+      "entry_date": "2026-08-18",
+      "entry_price": 413.410004,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-18",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-16",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
+      "price_source": "Yahoo Finance chart",
+      "target_stop": {
+        "outcome": "both_pending",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
     "128dc61cc75d8dce": {
       "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
@@ -248,6 +284,39 @@
         "target_date": null
       }
     },
+    "6130cb4b5cb31e41": {
+      "benchmark_entry_price": 767.450012,
+      "benchmark_source": "Yahoo Finance chart",
+      "data_gap": false,
+      "delisted": false,
+      "dividend_adjusted": true,
+      "entry_date": "2026-08-18",
+      "entry_price": 217.550003,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-18",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-16",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
+      "price_source": "Yahoo Finance chart",
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
     "68b21da81c849630": {
       "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
@@ -380,6 +449,39 @@
         "target_date": null
       }
     },
+    "88029a38f414db3b": {
+      "benchmark_entry_price": 767.450012,
+      "benchmark_source": "Yahoo Finance chart",
+      "data_gap": false,
+      "delisted": false,
+      "dividend_adjusted": true,
+      "entry_date": "2026-08-18",
+      "entry_price": 380.0,
+      "horizons": {
+        "12m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-08-18",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        },
+        "6m": {
+          "benchmark_return": null,
+          "excess_return": null,
+          "horizon_date": "2027-02-16",
+          "price_date": null,
+          "stock_return": null,
+          "verdict": "pending"
+        }
+      },
+      "price_source": "Yahoo Finance chart",
+      "target_stop": {
+        "outcome": "not_evaluable",
+        "stop_date": null,
+        "target_date": null
+      }
+    },
     "8be01fe830cf532c": {
       "benchmark_entry_price": 772.669983,
       "benchmark_source": "Yahoo Finance chart",
@@ -480,7 +582,7 @@
       }
     }
   },
-  "computed_at": "2026-08-21T05:50:11Z",
+  "computed_at": "2026-08-21T10:45:13Z",
   "format_version": 1,
   "methodology_version": 1
 }
