@@ -15,8 +15,8 @@
   <meta name="twitter:description" content="Timestamped calls, frozen rules, and independently verifiable outcomes.">
   <meta name="twitter:image" content="https://tudorpetraru.github.io/equity-thesis-scoreboard/og.png">
   <title>Equity Thesis Track Record</title>
-  <link rel="stylesheet" href="assets/styles.css?v=2">
-  <script src="assets/app.js?v=2" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=3">
+  <script src="assets/app.js?v=3" defer></script>
 </head>
 <body>
   <header class="hero">
@@ -91,6 +91,14 @@
           </table>
           <p class="empty-state" id="calls-empty">No calls have been revealed yet. Sealed calls will appear here after two days.</p>
         </div>
+        <nav class="table-pagination" id="calls-pagination" aria-label="Calls table pagination" hidden>
+          <span id="calls-page-status" aria-live="polite">Showing 0–0 of 0</span>
+          <div class="pagination-controls">
+            <button type="button" id="calls-prev" aria-controls="calls-table">Previous</button>
+            <span id="calls-page-number">Page 1 of 1</span>
+            <button type="button" id="calls-next" aria-controls="calls-table">Next</button>
+          </div>
+        </nav>
 
         <div class="scatter-panel">
           <div><p class="eyebrow">Distribution</p><h3>Excess-return scatter</h3><p>Each point is one resolved live call. The center line is SPY.</p></div>

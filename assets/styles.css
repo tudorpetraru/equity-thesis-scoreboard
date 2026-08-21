@@ -77,6 +77,12 @@ tr.voided { opacity: .52; text-decoration: line-through; }
 .verdict { display: flex; flex-direction: column; gap: 5px; white-space: nowrap; }
 .verdict small { color: rgba(255,255,255,.4); }
 .empty-state { margin: 0; padding: 42px 12px; color: rgba(255,255,255,.5); border-bottom: 1px solid rgba(255,255,255,.12); }
+.table-pagination { min-height: 74px; padding: 18px 12px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.56); font-size: 11px; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
+.table-pagination[hidden] { display: none; }
+.pagination-controls { display: flex; align-items: center; gap: 18px; }
+.pagination-controls button { padding: 9px 13px; border: 1px solid rgba(255,255,255,.3); border-radius: 2px; background: transparent; color: var(--white); font: inherit; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
+.pagination-controls button:hover:not(:disabled), .pagination-controls button:focus-visible { border-color: var(--lime); color: var(--lime); }
+.pagination-controls button:disabled { opacity: .3; cursor: default; }
 .scatter-panel { margin-top: 70px; padding: 34px; display: grid; grid-template-columns: 280px 1fr; gap: 40px; background: var(--ink-2); }
 .scatter-panel h3 { margin: 0; font-family: var(--serif); font-size: 34px; font-weight: 400; }
 .scatter-panel p { color: rgba(255,255,255,.5); font-size: 13px; line-height: 1.6; }
@@ -157,6 +163,8 @@ footer .shell { display: flex; justify-content: space-between; }
   .formula { align-items: start; flex-direction: column; }
   .formula-terms { grid-template-columns: 1fr; }
   .formula-terms div:nth-child(even) { padding-left: 0; border-left: 0; }
+  .table-pagination { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .pagination-controls { width: 100%; justify-content: space-between; gap: 10px; }
   .disclosure-grid { gap: 22px; }
   footer .shell { flex-direction: column; gap: 8px; }
 }
