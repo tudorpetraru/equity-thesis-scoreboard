@@ -70,15 +70,16 @@
       <div class="shell">
         <div class="section-heading light-heading">
           <div><p class="eyebrow">The ledger</p><h2 id="calls-title">Revealed calls</h2></div>
-          <p>Click a column heading to sort. Returns are excess returns versus SPY.</p>
+          <p>All revealed calls share one ledger. Click a column heading to sort; provenance and seal latency remain visible.</p>
         </div>
         <div class="table-wrap">
-          <table id="live-table">
+          <table id="calls-table">
             <thead><tr>
               <th data-sort="date" aria-sort="descending">Date</th>
               <th data-sort="ticker">Ticker</th>
               <th data-sort="rating">Rating</th>
               <th data-sort="conviction">Conviction</th>
+              <th data-sort="provenance">Provenance</th>
               <th data-sort="entry">Entry</th>
               <th data-sort="target">Target</th>
               <th data-sort="six">6m excess</th>
@@ -88,7 +89,7 @@
             </tr></thead>
             <tbody></tbody>
           </table>
-          <p class="empty-state" id="live-empty">No live calls have been revealed yet. Sealed calls will appear here after two days.</p>
+          <p class="empty-state" id="calls-empty">No calls have been revealed yet. Sealed calls will appear here after two days.</p>
         </div>
 
         <div class="scatter-panel">
@@ -96,20 +97,6 @@
           <canvas id="scatter" width="800" height="260" aria-label="Scatter plot of six- and twelve-month excess returns"></canvas>
         </div>
 
-        <div class="backfill-block" id="backfilled">
-          <div class="backfill-heading"><div><p class="eyebrow">Separate record</p><h3>Backfilled calls</h3></div><p>Recorded after the fact; timestamps are not independently verifiable.</p></div>
-          <div class="table-wrap">
-            <table id="backfill-table">
-              <thead><tr>
-                <th data-sort="date" aria-sort="descending">Date</th><th data-sort="ticker">Ticker</th><th data-sort="rating">Rating</th>
-                <th data-sort="conviction">Conviction</th><th data-sort="entry">Entry</th><th data-sort="target">Target</th>
-                <th data-sort="six">6m excess</th><th data-sort="twelve">12m excess</th><th data-sort="outcome">Target / stop</th><th data-sort="latency">Seal latency</th>
-              </tr></thead>
-              <tbody></tbody>
-            </table>
-            <p class="empty-state" id="backfill-empty">No backfilled calls are published.</p>
-          </div>
-        </div>
       </div>
     </section>
 

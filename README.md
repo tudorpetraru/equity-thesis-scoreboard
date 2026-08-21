@@ -32,7 +32,7 @@ The commitment convention is SHA-256 over UTF-8 `canonical_json(record) + salt`.
 - Source `AVOID` calls normalize to `STRONG_SELL`. Conviction is displayed as issued (`HIGH`, `MEDIUM-HIGH`, `MEDIUM`, or `LOW`) and does not affect scoring.
 - Pending horizons are not scored. Delistings or acquisitions use the last available close and are flagged.
 - Target and stop crossings use daily closes and are informational only.
-- Headline aggregates include revealed, non-voided, live calls only. Backfilled calls remain visually separate and are excluded.
+- All revealed calls appear in one ledger table with provenance and seal latency visible. Headline aggregates continue to include revealed, non-voided, live calls only.
 
 Version 1 is frozen. A future methodology version must be displayed and scored separately.
 

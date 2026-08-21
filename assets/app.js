@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const state = { live: [], backfilled: [], sort: { live: ["date", -1], backfilled: ["date", -1] } };
+  const state = { revealed: [], sort: ["date", -1] };
   const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 2 });
   const dateFmt = new Intl.DateTimeFormat("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" });
   const $ = (id) => document.getElementById(id);
@@ -47,6 +47,7 @@
       record.ticker,
       record.rating.replaceAll("_", " "),
       record.conviction,
+      record.provenance === "backfilled" ? "BACKFILLED" : "LIVE",
       performance?.entry_price == null ? "—" : money.format(performance.entry_price),
       money.format(record.target_price),
     ];
@@ -54,6 +55,7 @@
       const cell = document.createElement("td");
       cell.textContent = value;
       if (index === 1) cell.className = "ticker";
+      if (index === 4) cell.className = "provenance";
       if (index === 2) {
         cell.textContent = "";
         const kind = record.rating.includes("BUY") ? "buy" : record.rating.includes("SELL") ? "sell" : "hold";
@@ -82,6 +84,7 @@
       ticker: r.ticker,
       rating: r.rating,
       conviction: r.conviction,
+      provenance: r.provenance,
       entry: p.entry_price,
       target: r.target_price,
       six: horizon(p, "6m").excess_return,
@@ -91,28 +94,27 @@
     };
     return map[key] ?? -Infinity;
   }
-  function renderTable(kind) {
-    const tableName = kind === "live" ? "live" : "backfill";
-    const table = $(tableName + "-table");
+  function renderTable() {
+    const table = $("calls-table");
     const body = table.querySelector("tbody");
     body.textContent = "";
-    const key = state.sort[kind][0];
-    const direction = state.sort[kind][1];
-    const rows = [...state[kind]].sort((a, b) => {
+    const key = state.sort[0];
+    const direction = state.sort[1];
+    const rows = [...state.revealed].sort((a, b) => {
       const av = sortValue(a, key);
       const bv = sortValue(b, key);
       return (typeof av === "string" ? av.localeCompare(bv) : av - bv) * direction;
     });
     rows.forEach((item) => body.append(rowView(item)));
-    $(tableName + "-empty").hidden = rows.length > 0;
+    $("calls-empty").hidden = rows.length > 0;
   }
-  function wireSort(tableId, kind) {
+  function wireSort(tableId) {
     document.querySelectorAll("#" + tableId + " th").forEach((th) => th.addEventListener("click", () => {
       const key = th.dataset.sort;
-      state.sort[kind] = state.sort[kind][0] === key ? [key, state.sort[kind][1] * -1] : [key, 1];
+      state.sort = state.sort[0] === key ? [key, state.sort[1] * -1] : [key, 1];
       document.querySelectorAll("#" + tableId + " th").forEach((node) => node.removeAttribute("aria-sort"));
-      th.setAttribute("aria-sort", state.sort[kind][1] === 1 ? "ascending" : "descending");
-      renderTable(kind);
+      th.setAttribute("aria-sort", state.sort[1] === 1 ? "ascending" : "descending");
+      renderTable();
     }));
   }
   function summary(performance, calls) {
@@ -187,19 +189,17 @@
       const revealed = callsPayload.calls
         .filter((entry) => entry.state === "revealed")
         .map((entry) => ({ entry, performance: performance.calls?.[entry.call_id] }));
-      state.live = revealed.filter((item) => item.entry.record.provenance === "live");
-      state.backfilled = revealed.filter((item) => item.entry.record.provenance === "backfilled");
+      state.revealed = revealed;
+      const live = revealed.filter((item) => item.entry.record.provenance === "live");
       summary(performance, callsPayload.calls);
-      renderTable("live");
-      renderTable("backfilled");
-      drawScatter(state.live);
-      window.addEventListener("resize", () => drawScatter(state.live), { passive: true });
+      renderTable();
+      drawScatter(live);
+      window.addEventListener("resize", () => drawScatter(live), { passive: true });
     } catch (error) {
       $("updated-at").textContent = "Data refresh unavailable";
       console.error(error);
     }
   }
-  wireSort("live-table", "live");
-  wireSort("backfill-table", "backfilled");
+  wireSort("calls-table");
   init();
 })();
