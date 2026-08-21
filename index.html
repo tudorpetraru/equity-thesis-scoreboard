@@ -15,8 +15,8 @@
   <meta name="twitter:description" content="Timestamped calls, frozen rules, and independently verifiable outcomes.">
   <meta name="twitter:image" content="https://tudorpetraru.github.io/equity-thesis-scoreboard/og.png">
   <title>Equity Thesis Track Record</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/app.js" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=2">
+  <script src="assets/app.js?v=2" defer></script>
 </head>
 <body>
   <header class="hero">
@@ -52,16 +52,16 @@
         <p id="updated-at" class="updated">Awaiting first refresh</p>
       </div>
       <div class="stat-grid" aria-live="polite">
-        <article class="stat-card stat-primary"><span>Revealed calls</span><strong id="stat-revealed">0</strong><small>Public records</small></article>
-        <article class="stat-card"><span>Open horizons</span><strong id="stat-pending">0</strong><small>Awaiting maturity</small></article>
-        <article class="stat-card"><span>Sealed calls</span><strong id="stat-sealed">0</strong><small>Awaiting reveal</small></article>
+        <article class="stat-card stat-primary"><span>Revealed calls</span><strong id="stat-revealed">—</strong><small>Public records</small></article>
+        <article class="stat-card"><span>Open horizons</span><strong id="stat-pending">—</strong><small>Awaiting maturity</small></article>
+        <article class="stat-card"><span>Sealed calls</span><strong id="stat-sealed">—</strong><small>Awaiting reveal</small></article>
         <article class="stat-card"><span>6m hit rate</span><strong id="stat-hit-6m">—</strong><small id="stat-n-6m">No resolved calls</small></article>
         <article class="stat-card"><span>12m hit rate</span><strong id="stat-hit-12m">—</strong><small id="stat-n-12m">No resolved calls</small></article>
         <article class="stat-card"><span>12m median excess</span><strong id="stat-median-12m">—</strong><small>Versus SPY</small></article>
       </div>
       <div class="sealed-banner">
         <div class="seal-orbit" aria-hidden="true"><span></span></div>
-        <div><strong id="sealed-count">0 calls sealed, awaiting reveal</strong><p>Contents remain hidden during the two-day embargo. Their commitments are already timestamped in public history.</p></div>
+        <div><strong id="sealed-count">Loading public records…</strong><p>Contents remain hidden during the two-day embargo. Their commitments are already timestamped in public history.</p></div>
         <a href="#verification">Inspect the method</a>
       </div>
     </section>
@@ -70,15 +70,16 @@
       <div class="shell">
         <div class="section-heading light-heading">
           <div><p class="eyebrow">The ledger</p><h2 id="calls-title">Revealed calls</h2></div>
-          <p>Click a column heading to sort. Returns are excess returns versus SPY.</p>
+          <p>All revealed calls share one ledger. Click a column heading to sort; provenance and seal latency remain visible.</p>
         </div>
         <div class="table-wrap">
-          <table id="live-table">
+          <table id="calls-table">
             <thead><tr>
               <th data-sort="date" aria-sort="descending">Date</th>
               <th data-sort="ticker">Ticker</th>
               <th data-sort="rating">Rating</th>
               <th data-sort="conviction">Conviction</th>
+              <th data-sort="provenance">Provenance</th>
               <th data-sort="entry">Entry</th>
               <th data-sort="target">Target</th>
               <th data-sort="six">6m excess</th>
@@ -88,7 +89,7 @@
             </tr></thead>
             <tbody></tbody>
           </table>
-          <p class="empty-state" id="live-empty">No live calls have been revealed yet. Sealed calls will appear here after two days.</p>
+          <p class="empty-state" id="calls-empty">No calls have been revealed yet. Sealed calls will appear here after two days.</p>
         </div>
 
         <div class="scatter-panel">
@@ -96,20 +97,6 @@
           <canvas id="scatter" width="800" height="260" aria-label="Scatter plot of six- and twelve-month excess returns"></canvas>
         </div>
 
-        <div class="backfill-block" id="backfilled">
-          <div class="backfill-heading"><div><p class="eyebrow">Separate record</p><h3>Backfilled calls</h3></div><p>Recorded after the fact; timestamps are not independently verifiable.</p></div>
-          <div class="table-wrap">
-            <table id="backfill-table">
-              <thead><tr>
-                <th data-sort="date" aria-sort="descending">Date</th><th data-sort="ticker">Ticker</th><th data-sort="rating">Rating</th>
-                <th data-sort="conviction">Conviction</th><th data-sort="entry">Entry</th><th data-sort="target">Target</th>
-                <th data-sort="six">6m excess</th><th data-sort="twelve">12m excess</th><th data-sort="outcome">Target / stop</th><th data-sort="latency">Seal latency</th>
-              </tr></thead>
-              <tbody></tbody>
-            </table>
-            <p class="empty-state" id="backfill-empty">No backfilled calls are published.</p>
-          </div>
-        </div>
       </div>
     </section>
 

@@ -69,6 +69,7 @@ th:hover { color: var(--lime); }
 td { padding: 19px 12px; border-bottom: 1px solid rgba(255,255,255,.1); font-size: 13px; vertical-align: top; }
 tr.voided { opacity: .52; text-decoration: line-through; }
 .ticker { font-weight: 900; letter-spacing: .05em; }
+.provenance { color: rgba(255,255,255,.58); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
 .badge { display: inline-block; padding: 5px 8px; border-radius: 2px; font-size: 10px; font-weight: 850; letter-spacing: .06em; }
 .badge-buy, .badge-correct { color: var(--ink); background: var(--lime); }
 .badge-sell, .badge-incorrect { color: var(--white); background: var(--red); }
@@ -77,12 +78,9 @@ tr.voided { opacity: .52; text-decoration: line-through; }
 .verdict small { color: rgba(255,255,255,.4); }
 .empty-state { margin: 0; padding: 42px 12px; color: rgba(255,255,255,.5); border-bottom: 1px solid rgba(255,255,255,.12); }
 .scatter-panel { margin-top: 70px; padding: 34px; display: grid; grid-template-columns: 280px 1fr; gap: 40px; background: var(--ink-2); }
-.scatter-panel h3, .backfill-heading h3 { margin: 0; font-family: var(--serif); font-size: 34px; font-weight: 400; }
+.scatter-panel h3 { margin: 0; font-family: var(--serif); font-size: 34px; font-weight: 400; }
 .scatter-panel p { color: rgba(255,255,255,.5); font-size: 13px; line-height: 1.6; }
 #scatter { width: 100%; max-height: 250px; }
-.backfill-block { margin-top: 100px; }
-.backfill-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 26px; }
-.backfill-heading p:last-child { max-width: 420px; color: var(--amber); font-size: 13px; }
 
 .method { padding: 120px 0; display: grid; grid-template-columns: .8fr 1.5fr; gap: 90px; }
 .method-intro { position: sticky; top: 30px; align-self: start; }
@@ -159,7 +157,6 @@ footer .shell { display: flex; justify-content: space-between; }
   .formula { align-items: start; flex-direction: column; }
   .formula-terms { grid-template-columns: 1fr; }
   .formula-terms div:nth-child(even) { padding-left: 0; border-left: 0; }
-  .backfill-heading { align-items: start; flex-direction: column; }
   .disclosure-grid { gap: 22px; }
   footer .shell { flex-direction: column; gap: 8px; }
 }
