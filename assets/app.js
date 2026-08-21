@@ -119,19 +119,20 @@
   }
   function summary(performance, calls) {
     const aggregate = performance.aggregates || {};
-    $("stat-revealed").textContent = aggregate.revealed ?? calls.filter((item) => item.state === "revealed").length;
+    $("stat-revealed").textContent = calls.filter((item) => item.state === "revealed").length;
     for (const name of ["6m", "12m"]) {
       const item = aggregate.horizons?.[name] || {};
       $("stat-hit-" + name).textContent = item.hit_rate == null ? "—" : Math.round(item.hit_rate * 100) + "%";
       $("stat-n-" + name).textContent = item.n ? item.n + " resolved call" + (item.n === 1 ? "" : "s") : "No resolved calls";
       if (name === "12m") $("stat-median-12m").textContent = pct(item.median_excess_return);
     }
-    const sealed = aggregate.sealed ?? calls.filter((item) => item.state === "sealed").length;
+    const sealed = calls.filter((item) => item.state === "sealed").length;
+    const hasHorizonSummary = Boolean(aggregate.horizons?.["6m"] || aggregate.horizons?.["12m"]);
     const pending = (aggregate.horizons?.["6m"]?.pending || 0) + (aggregate.horizons?.["12m"]?.pending || 0);
-    $("stat-pending").textContent = pending;
+    $("stat-pending").textContent = hasHorizonSummary ? pending : "—";
     $("stat-sealed").textContent = sealed;
     $("sealed-count").textContent = sealed + " call" + (sealed === 1 ? "" : "s") + " sealed, awaiting reveal";
-    $("updated-at").textContent = performance.computed_at ? "Prices refreshed " + dateText(performance.computed_at) : "Awaiting first price refresh";
+    $("updated-at").textContent = performance.computed_at ? "Prices refreshed " + dateText(performance.computed_at) : "Calls loaded; performance refresh unavailable";
   }
   function drawScatter(items) {
     const canvas = $("scatter");
@@ -179,13 +180,24 @@
   }
   async function init() {
     try {
-      const responses = await Promise.all([
+      const results = await Promise.allSettled([
         fetch("data/calls.json", { cache: "no-store" }),
         fetch("data/performance.json", { cache: "no-store" }),
       ]);
-      if (!responses[0].ok || !responses[1].ok) throw new Error("Public data is unavailable");
-      const callsPayload = await responses[0].json();
-      const performance = await responses[1].json();
+      const callsResponse = results[0].status === "fulfilled" ? results[0].value : null;
+      if (!callsResponse?.ok) throw new Error("Public call data is unavailable");
+      const callsPayload = await callsResponse.json();
+      let performance = {};
+      const performanceResponse = results[1].status === "fulfilled" ? results[1].value : null;
+      if (performanceResponse?.ok) {
+        try {
+          performance = await performanceResponse.json();
+        } catch (error) {
+          console.warn("Performance data could not be parsed", error);
+        }
+      } else {
+        console.warn("Performance data is unavailable");
+      }
       const revealed = callsPayload.calls
         .filter((entry) => entry.state === "revealed")
         .map((entry) => ({ entry, performance: performance.calls?.[entry.call_id] }));

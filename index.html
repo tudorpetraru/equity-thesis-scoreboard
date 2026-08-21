@@ -15,8 +15,8 @@
   <meta name="twitter:description" content="Timestamped calls, frozen rules, and independently verifiable outcomes.">
   <meta name="twitter:image" content="https://tudorpetraru.github.io/equity-thesis-scoreboard/og.png">
   <title>Equity Thesis Track Record</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/app.js" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=2">
+  <script src="assets/app.js?v=2" defer></script>
 </head>
 <body>
   <header class="hero">
@@ -52,16 +52,16 @@
         <p id="updated-at" class="updated">Awaiting first refresh</p>
       </div>
       <div class="stat-grid" aria-live="polite">
-        <article class="stat-card stat-primary"><span>Revealed calls</span><strong id="stat-revealed">0</strong><small>Public records</small></article>
-        <article class="stat-card"><span>Open horizons</span><strong id="stat-pending">0</strong><small>Awaiting maturity</small></article>
-        <article class="stat-card"><span>Sealed calls</span><strong id="stat-sealed">0</strong><small>Awaiting reveal</small></article>
+        <article class="stat-card stat-primary"><span>Revealed calls</span><strong id="stat-revealed">—</strong><small>Public records</small></article>
+        <article class="stat-card"><span>Open horizons</span><strong id="stat-pending">—</strong><small>Awaiting maturity</small></article>
+        <article class="stat-card"><span>Sealed calls</span><strong id="stat-sealed">—</strong><small>Awaiting reveal</small></article>
         <article class="stat-card"><span>6m hit rate</span><strong id="stat-hit-6m">—</strong><small id="stat-n-6m">No resolved calls</small></article>
         <article class="stat-card"><span>12m hit rate</span><strong id="stat-hit-12m">—</strong><small id="stat-n-12m">No resolved calls</small></article>
         <article class="stat-card"><span>12m median excess</span><strong id="stat-median-12m">—</strong><small>Versus SPY</small></article>
       </div>
       <div class="sealed-banner">
         <div class="seal-orbit" aria-hidden="true"><span></span></div>
-        <div><strong id="sealed-count">0 calls sealed, awaiting reveal</strong><p>Contents remain hidden during the two-day embargo. Their commitments are already timestamped in public history.</p></div>
+        <div><strong id="sealed-count">Loading public records…</strong><p>Contents remain hidden during the two-day embargo. Their commitments are already timestamped in public history.</p></div>
         <a href="#verification">Inspect the method</a>
       </div>
     </section>
