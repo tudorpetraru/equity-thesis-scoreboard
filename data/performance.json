@@ -39,7 +39,7 @@
   },
   "calls": {
     "0c3087b6f697bf42": {
-      "benchmark_entry_price": 767.450012,
+      "benchmark_entry_price": 765.549011,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -72,7 +72,7 @@
       }
     },
     "128dc61cc75d8dce": {
-      "benchmark_entry_price": 772.669983,
+      "benchmark_entry_price": 770.756042,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -105,7 +105,7 @@
       }
     },
     "19053c0be69ff59a": {
-      "benchmark_entry_price": 776.340027,
+      "benchmark_entry_price": 774.416992,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -138,7 +138,7 @@
       }
     },
     "1ba9f0c875c89dec": {
-      "benchmark_entry_price": 776.340027,
+      "benchmark_entry_price": 774.416992,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -171,7 +171,7 @@
       }
     },
     "22261f41ab595819": {
-      "benchmark_entry_price": 772.669983,
+      "benchmark_entry_price": 770.756042,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -220,7 +220,7 @@
       }
     },
     "2b7aa34ffcaff6f6": {
-      "benchmark_entry_price": 772.669983,
+      "benchmark_entry_price": 770.756042,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -285,7 +285,7 @@
       }
     },
     "6130cb4b5cb31e41": {
-      "benchmark_entry_price": 767.450012,
+      "benchmark_entry_price": 765.549011,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -318,7 +318,7 @@
       }
     },
     "68b21da81c849630": {
-      "benchmark_entry_price": 772.669983,
+      "benchmark_entry_price": 770.756042,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -351,7 +351,7 @@
       }
     },
     "72d4955197b70bf5": {
-      "benchmark_entry_price": 776.340027,
+      "benchmark_entry_price": 774.416992,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -384,7 +384,7 @@
       }
     },
     "80c16fc01835add7": {
-      "benchmark_entry_price": 772.669983,
+      "benchmark_entry_price": 770.756042,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -417,7 +417,7 @@
       }
     },
     "87f98dee38bbce29": {
-      "benchmark_entry_price": 772.669983,
+      "benchmark_entry_price": 770.756042,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -450,7 +450,7 @@
       }
     },
     "88029a38f414db3b": {
-      "benchmark_entry_price": 767.450012,
+      "benchmark_entry_price": 765.549011,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -483,7 +483,7 @@
       }
     },
     "8be01fe830cf532c": {
-      "benchmark_entry_price": 772.669983,
+      "benchmark_entry_price": 770.756042,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -516,7 +516,7 @@
       }
     },
     "9acd90d424d1a3ea": {
-      "benchmark_entry_price": 772.669983,
+      "benchmark_entry_price": 770.756042,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -549,7 +549,7 @@
       }
     },
     "e4526c1eb624fdb3": {
-      "benchmark_entry_price": 772.669983,
+      "benchmark_entry_price": 770.756042,
       "benchmark_source": "Yahoo Finance chart",
       "data_gap": false,
       "delisted": false,
@@ -582,7 +582,7 @@
       }
     }
   },
-  "computed_at": "2026-09-18T09:49:52Z",
+  "computed_at": "2026-09-19T09:34:14Z",
   "format_version": 1,
   "methodology_version": 1
 }
