@@ -144,7 +144,7 @@
       "delisted": false,
       "dividend_adjusted": true,
       "entry_date": "2026-08-14",
-      "entry_price": 150.520004,
+      "entry_price": 149.965363,
       "horizons": {
         "12m": {
           "benchmark_return": null,
@@ -582,7 +582,7 @@
       }
     }
   },
-  "computed_at": "2026-10-09T11:56:19Z",
+  "computed_at": "2026-10-10T11:12:58Z",
   "format_version": 1,
   "methodology_version": 1
 }
