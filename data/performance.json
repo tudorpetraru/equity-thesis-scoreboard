@@ -444,9 +444,9 @@
       },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
-        "outcome": "both_pending",
+        "outcome": "target_reached",
         "stop_date": null,
-        "target_date": null
+        "target_date": "2026-10-27"
       }
     },
     "88029a38f414db3b": {
@@ -582,7 +582,7 @@
       }
     }
   },
-  "computed_at": "2026-10-27T10:38:49Z",
+  "computed_at": "2026-10-28T11:23:21Z",
   "format_version": 1,
   "methodology_version": 1
 }
