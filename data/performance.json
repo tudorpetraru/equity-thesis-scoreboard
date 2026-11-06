@@ -66,8 +66,8 @@
       },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
-        "outcome": "both_pending",
-        "stop_date": null,
+        "outcome": "stop_breached",
+        "stop_date": "2026-11-05",
         "target_date": null
       }
     },
@@ -247,8 +247,8 @@
       },
       "price_source": "Yahoo Finance chart",
       "target_stop": {
-        "outcome": "both_pending",
-        "stop_date": null,
+        "outcome": "stop_breached",
+        "stop_date": "2026-11-05",
         "target_date": null
       }
     },
@@ -582,7 +582,7 @@
       }
     }
   },
-  "computed_at": "2026-11-05T13:15:39Z",
+  "computed_at": "2026-11-06T12:59:16Z",
   "format_version": 1,
   "methodology_version": 1
 }
